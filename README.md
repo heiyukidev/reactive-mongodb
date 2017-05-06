@@ -12,6 +12,14 @@ Use RxJS's Operators you can work easily on your mongodb documents and define co
 
 Currently working on data models so you can specifie the structure of your JSON objects and validate them before inserting them into your database. I made a module [hyvalidator](https://github.com/heiyukidev/hyvalidator) specificly for data validation, I plan on using it for this module to validate the data models.
 
+## Suggestions
+
+Always Open For [Suggestions](https://github.com/heiyukidev/reactive-mongodb/issues). you can leave them as [Issues](https://github.com/heiyukidev/reactive-mongodb/issues)
+
+## Bugs
+
+Please report your bugs here: [Issues](https://github.com/heiyukidev/reactive-mongodb/issues)
+
 ## Installation
 
 Add the project to your dependencies
@@ -261,3 +269,13 @@ function completionHandler() {
 Users.findById(id).subscribe(onItemReceived, errorHandler, completionHandler);
 // Id is the string value of Object ID Of MongoDB, see delete by Id Example.
 ```
+
+
+## About the Author
+
+I'm Khaled Romdhane but mostly known as heiyuki.
+My handle is : [@heiyukidev](https://github.com/heiyukidev).
+
+I Work at this amazing Company [@redcarpetsolutions](https://github.com/redcarpetsolutions) don't hesitate to go check us out.
+
+This project is backed By [redcarpetsolutions](https://github.com/redcarpetsolutions)

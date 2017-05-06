@@ -1,0 +1,22 @@
+{
+  "name": "reactive-mongodb",
+  "version": "0.1.0",
+  "description": "An ODM for MongoDB with very strict data types/stucture. It is Based on Observable (with RxJS)",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Khaled Romdhane <heiyukidev@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "hyvalidator": "^0.8.0",
+    "mongodb": "^2.2.26",
+    "rxjs": "^5.3.1"
+  },
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "mocha": "^3.3.0"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "reactive-mongodb",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "An ODM for MongoDB with very strict data types/stucture. It is Based on Observable (with RxJS)",
   "main": "index.js",
   "scripts": {
@@ -16,5 +16,25 @@
   "devDependencies": {
     "assert": "^1.4.1",
     "mocha": "^3.3.0"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heiyukidev/reactive-mongodb.git"
+  },
+  "keywords": [
+    "RxJs",
+    "reactive",
+    "mongodb",
+    "rx",
+    "mongo",
+    "odm",
+    "observable"
+  ],
+  "bugs": {
+    "url": "https://github.com/heiyukidev/reactive-mongodb/issues"
+  },
+  "homepage": "https://github.com/heiyukidev/reactive-mongodb#readme"
 }

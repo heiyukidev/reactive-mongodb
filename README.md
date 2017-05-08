@@ -54,7 +54,7 @@ const Users = new Collection('users');
 ### Insert A Document
 
 ```javascript
-const Collection = require('../index.js').Collection;
+const Collection = require('reactive-mongodb').Collection;
 const Users = new Collection('users');
 
 var user; //A document you want to insert
@@ -79,7 +79,7 @@ Users.insert(user).subscribe(onItemReceived, errorHandler, completionHandler);
 ### Update A Document
 
 ```javascript
-const Collection = require('../index.js').Collection;
+const Collection = require('reactive-mongodb').Collection;
 const Users = new Collection('users');
 
 var oldUser; //A document you want to update
@@ -106,7 +106,7 @@ Users.updateOne(oldUser,{$set:{fields:values}}).subscribe(null, errorHandler, co
 ### Update A Document By It's Id
 
 ```javascript
-const Collection = require('../index.js').Collection;
+const Collection = require('reactive-mongodb').Collection;
 const Users = new Collection('users');
 
 var newUser; // The New Document
@@ -127,7 +127,7 @@ Users.updateById(id,newUser).subscribe(null, errorHandler, completionHandler);
 ### Update Multiple Documents
 
 ```javascript
-const Collection = require('../index.js').Collection;
+const Collection = require('reactive-mongodb').Collection;
 const Users = new Collection('users');
 
 var query; //A query to determine which documents to update
@@ -148,7 +148,7 @@ Users.update(query,{$set:{fields:values}}).subscribe(null, errorHandler, complet
 ### Delete Multiple Documents
 
 ```javascript
-const Collection = require('../index.js').Collection;
+const Collection = require('reactive-mongodb').Collection;
 const Users = new Collection('users');
 
 var query; //A query to determine which documents to delete
@@ -168,7 +168,7 @@ Users.delete(query).subscribe(null, errorHandler, completionHandler);
 ### Delete A Documents By Id
 
 ```javascript
-const Collection = require('../index.js').Collection;
+const Collection = require('reactive-mongodb').Collection;
 const Users = new Collection('users');
 
 function errorHandler(err) {
@@ -193,7 +193,7 @@ Users.deleteById("590db2cc375bcc2cddc450a5").subscribe(onItemReceived, errorHand
 ### Finding Documents
 
 ```javascript
-const Collection = require('../index.js').Collection;
+const Collection = require('reactive-mongodb').Collection;
 const Users = new Collection('users');
 
 const query = {
@@ -221,7 +221,7 @@ Users.find(query).subscribe(onItemReceived, errorHandler, completionHandler);
 ### Finding A Document
 
 ```javascript
-const Collection = require('../index.js').Collection;
+const Collection = require('reactive-mongodb').Collection;
 const Users = new Collection('users');
 
 const query = {
@@ -248,7 +248,7 @@ Users.findOne(query).subscribe(onItemReceived, errorHandler, completionHandler);
 ### Finding A Document By Id
 
 ```javascript
-const Collection = require('../index.js').Collection;
+const Collection = require('reactive-mongodb').Collection;
 const Users = new Collection('users');
 
 

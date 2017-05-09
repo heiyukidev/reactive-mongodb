@@ -45,7 +45,7 @@ Reactive-MongoDB allows you to interact with your collections after you connect 
 ### New Collection
 
 ```javascript
-const Collection = require('../index.js').Collection;
+const Collection = require('reactive-mongodb').Collection;
 //Collection is a class that represents your collection in the database
 const Users = new Collection('users');
 // 'users' will be the name of the collection in the mongodb database

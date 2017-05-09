@@ -20,12 +20,8 @@ module.exports = () => {
         });
         it("Testing updateOne({name:'hello i\'m mocha'},{name:'I changed from Mocha'})", function (done) {
             var Test = new Collection('test');
-            Test.updateOne({ name: 'hello i\'m mocha' }, { name: 'I changed from Mocha' }).subscribe((data) => {
-                var rules = new Objects.Rule;
-                var hyerrors = hyvalidator.validate(data, rules);
-                if (hyerrors === null) {
-                    done();
-                }
+            Test.updateOne({ name: 'hello i\'m mocha' }, { name: 'I changed from Mocha' }).subscribe(empty,empty,() => {
+                done();
             });
         });
         it("Testing update({ name: 'I changed from Mocha' },{$set:{name:'I changed from Mocha Again'}})", function (done) {

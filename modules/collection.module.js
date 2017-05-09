@@ -57,7 +57,7 @@ class Collection {
             (observer) => {
                 var hyerrors = validateId(id);
                 if (hyerrors === null) {
-                    this.collection.update({ _id: ObjectId(id) }, newObject, { multi: true }, (err, data) => {
+                    this.collection.update({ _id: ObjectId(id) }, newObject, { multi: false }, (err, data) => {
                         if (err) {
                             observer.error(err);
                         }

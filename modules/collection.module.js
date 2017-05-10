@@ -11,10 +11,14 @@ validateId = (id) => {
 }
 //Collection Class
 class Collection {
+
     constructor(name) {
-        this.collection = global.db.collection(name);
+        this.name = name;
     }
     insert(object) {
+        if (!this.collection) {
+            this.collection = global.db.collection(this.name);
+        }
         return Observable.create(
             (observer) => {
                 this.collection.insert(object, (err, data) => {
@@ -25,8 +29,12 @@ class Collection {
                     observer.complete();
                 });
             });
+
     }
     updateOne(object, newObject) {
+        if (!this.collection) {
+            this.collection = global.db.collection(this.name);
+        }
         return Observable.create(
             (observer) => {
                 this.collection.update(object, newObject, { multi: false }, (err, data) => {
@@ -38,6 +46,9 @@ class Collection {
             });
     }
     update(object, newObject) {
+        if (!this.collection) {
+            this.collection = global.db.collection(this.name);
+        }
         return Observable.create(
             (observer) => {
                 if (newObject.$set) {
@@ -53,6 +64,9 @@ class Collection {
             });
     }
     updateById(id, newObject) {
+        if (!this.collection) {
+            this.collection = global.db.collection(this.namename);
+        }
         return Observable.create(
             (observer) => {
                 var hyerrors = validateId(id);
@@ -70,6 +84,9 @@ class Collection {
     }
 
     delete(query) {
+        if (!this.collection) {
+            this.collection = global.db.collection(this.name);
+        }
         return Observable.create(
             (observer) => {
                 this.collection.remove(query, { justOne: false }, (err, data) => {
@@ -81,6 +98,9 @@ class Collection {
             });
     }
     deleteById(id) {
+        if (!this.collection) {
+            this.collection = global.db.collection(this.name);
+        }
         return Observable.create(
             (observer) => {
                 var hyerrors = validateId(id);
@@ -98,6 +118,9 @@ class Collection {
     }
 
     find(query) {
+        if (!this.collection) {
+            this.collection = global.db.collection(this.name);
+        }
         return Observable.create(
             (observer) => {
                 this.collection.find(query).toArray((err, data) => {
@@ -112,6 +135,9 @@ class Collection {
             });
     }
     findOne(query) {
+        if (!this.collection) {
+            this.collection = global.db.collection(this.name);
+        }
         return Observable.create(
             (observer) => {
                 this.collection.find(query).toArray((err, data) => {
@@ -129,6 +155,9 @@ class Collection {
     }
 
     findById(id) {
+        if (!this.collection) {
+            this.collection = global.db.collection(this.name);
+        }
         return Observable.create(
             (observer) => {
                 var hyerrors = validateId(id);

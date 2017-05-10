@@ -1,6 +1,6 @@
 {
   "name": "reactive-mongodb",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "An ODM for MongoDB with very strict data types/stucture. It is Based on Observable (with RxJS)",
   "main": "index.js",
   "scripts": {
